@@ -1,12 +1,12 @@
 #!/bin/bash 
-archivo_entrada="$1"
-directorio_destino="$2"
+archivo_entr="$1"
+directorio_dest="$2"
 
-nombre_archivo=$(basename "$archivo_entrada")
+nombre_archivo=$(basename "$archivo_entr")
 
 fecha=$(date "+ %Y-%m-%d")
 
-archivo_respaldo="$directorio_destino/${nombre_archivo}_${fecha}"
+archivo_res="$directorio_dest/${nombre_archivo}_${fecha}"
 
-echo "$USER" > "$archivo_respaldo"
-cat "$archivo_entrada" >> "$archivo_respaldo"
+echo "$USER" > "$archivo_res"
+cat "$archivo_entr" >> "$archivo_res"

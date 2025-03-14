@@ -1,0 +1,14 @@
+#! /usr/bin/env bash
+
+if [[ ! -f "$1" ]]; then
+    echo "El primer argumento no es un archivo válido"
+elif [[ ! -d "$2" ]]; then
+    echo "El segundo argumento no es un directorio válido"
+    if grep 'hola' "$1"; then
+        touch "$2"/contiene.txt
+    else
+        touch "$2"/nocontiene.txt
+    fi
+else
+    echo "error en el paso de archivos"
+fi
